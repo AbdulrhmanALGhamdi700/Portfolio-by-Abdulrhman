@@ -1,0 +1,163 @@
+/*Abdulrhman AL-Ghamdi 2140786*/
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-image {
+  max-width: 100%;
+  height: auto;
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+@media (max-width: 575px) {
+  .profile-image {
+    max-width: 100px; /* Set a fixed width of 50px for smaller screens */
+  }
+}
+
+@media (min-width: 576px) {
+  .profile-image {
+    max-width: 200px; /* Adjust the max-width for 576px breakpoint */
+  }
+  .intro h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-image {
+    max-width: 300px; /* Adjust the max-width for 768px breakpoint */
+  }
+  .intro h1 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-image {
+    max-width: 400px; /* Adjust the max-width for 992px breakpoint */
+  }
+  .intro h1 {
+    font-size: 36px;
+  }
+}
+
+.section-spacing {
+  margin-bottom: 75px;
+}
+
+.intro {
+  text-align: left;
+}
+
+.intro h1, .intro h2 {
+  margin-bottom: 10px;
+}
+
+.intro span {
+  color: #1e90ff;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  background-color:#d0c6b9;
+}
+
+footer {
+  background-color: #d8bb92;
+  padding: 30px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  width: 350px;
+  height: 250px;
+  margin: 10px;
+  background-color: #EADBC8;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project:hover {
+  width: 450px;
+  height: 400px;
+}
+
+.project img {
+  width: 100%;
+  height: 50%;
+  object-fit: scale-down;
+}
+
+.project-content {
+  padding: 10px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.project-description {
+  font-size: 14px;
+}
