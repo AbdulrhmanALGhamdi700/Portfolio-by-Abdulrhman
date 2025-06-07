@@ -2,262 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdulrhman Al‑Ghamdi | Game Developer</title>
-  <style>
-    /* Variables */
-    :root {
-      --color-yellow: #FFB020;
-      --color-green: #00CC88;
-      --color-blue: #409CFF;
-      --color-dark: #121212;
-      --color-gray: #1E1E1E;
-      --text-light: #E0E0E0;
-      --transition-duration: 0.3s;
-    }
-    /* Global Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      background-color: var(--color-dark);
-      color: var(--text-light);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-    }
-    a {
-      color: var(--text-light);
-      text-decoration: none;
-      transition: color var(--transition-duration);
-    }
-    a:hover {
-      color: var(--color-blue);
-    }
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: var(--color-gray);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: var(--color-yellow);
-      letter-spacing: 1px;
-    }
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav ul li {
-      list-style: none;
-    }
-    nav ul li a {
-      position: relative;
-    }
-    nav ul li a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: var(--color-blue);
-      transition: width var(--transition-duration);
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-    }
-    nav ul li a:hover::after {
-      width: 100%;
-    }
-    /* Hero */
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1rem;
-      background: linear-gradient(135deg, var(--color-gray), var(--color-dark));
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 2rem;
-    }
-    .btn-primary {
-      background-color: var(--color-green);
-      color: var(--color-dark);
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color var(--transition-duration), transform var(--transition-duration);
-    }
-    .btn-primary:hover {
-      background-color: var(--color-yellow);
-      transform: translateY(-2px);
-    }
-    /* Sections */
-    section {
-      padding: 6rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      position: relative;
-      display: inline-block;
-    }
-    section h2::after {
-      content: '';
-      width: 50px;
-      height: 4px;
-      background: var(--color-blue);
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-    }
-    /* Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .project-card {
-      background: var(--color-gray);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      transition: transform var(--transition-duration), box-shadow var(--transition-duration);
-      display: flex;
-      flex-direction: column;
-    }
-    .project-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-    .project-content {
-      padding: 1rem;
-      flex: 1;
-    }
-    .project-content h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-      color: var(--color-yellow);
-    }
-    .project-content p {
-      flex: 1;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-    .project-content a {
-      font-weight: bold;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
-    }
-    /* Contact */
-    .contact-form {
-      display: grid;
-      gap: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 0.75rem;
-      border-radius: 4px;
-      border: none;
-      background: var(--color-gray);
-      color: var(--text-light);
-      resize: vertical;
-      font-family: inherit;
-    }
-    .contact-form button {
-      justify-self: start;
-    }
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: var(--color-gray);
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'">
+  <title>Abdulrhman Al-Ghamdi — Game Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header / Nav -->
   <header>
     <div class="logo">OFF BOX Studios</div>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#attributes">Attributes</a></li>
       </ul>
     </nav>
   </header>
-  <!-- Hero -->
+
+  <!-- Hero with Bite Button -->
   <section class="hero" id="home">
-    <h1>Abdulrhman Al‑Ghamdi</h1>
-    <p>Software Engineer & Indie Game Developer. Crafting immersive experiences with Unity, C#, and creative problem solving.</p>
-    <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView()">View Projects</button>
+    <h1>Abdulrhman Al-Ghamdi</h1>
+    <p>Software Engineer & Indie Game Developer crafting immersive experiences with Unity and C#.</p>
+    <div class="bite-button-wrapper">
+      <button id="homePlayBtn" class="bite-button">View Portfolio</button>
+      <div class="teeth"></div>
+    </div>
   </section>
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a passionate game developer specialized in Unity (2D/3D), C#, and UX design. I build modular, scalable systems and polished prototypes that delight players and drive engagement. My background in software engineering ensures clean code, strong architecture, and efficient workflows.</p>
+
+  <!-- 1. Contact Information -->
+  <section id="contact" class="panel">
+    <h2>1. Contact Information</h2>
+    <p><strong>Email:</strong> <a href="mailto:abdulrhman.alghamdi700@gmail.com">abdulrhman.alghamdi700@gmail.com</a></p>
+    <p><strong>Location:</strong> Jeddah, Saudi Arabia</p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abdulrhman-al-ghamdi-software-engineer" target="_blank">/in/abdulrhman-al-ghamdi-software-engineer</a></p>
+    <p><strong>Itch.io:</strong> <a href="https://itch.io/xd7oome3000" target="_blank">/xd7oome3000</a></p>
   </section>
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
+
+  <!-- 2. Professional Summary -->
+  <section id="summary" class="panel">
+    <h2>2. Professional Summary</h2>
+    <p>Highly motivated leader with a passion for game development, web development, and UX design. Experienced in Agile teams, Unity (2D/3D), C#, Java, JavaScript (ES6+), and Python. Driven to deliver polished, scalable systems and immersive experiences.</p>
+  </section>
+
+  <!-- 3. Education & Certifications -->
+  <section id="education" class="panel">
+    <h2>3. Education &amp; Certifications</h2>
+    <h3>3.1 Education</h3>
+    <ul>
+      <li><strong>B.Sc. Software Engineering</strong>, University of Jeddah, KSA — Graduated 2025 (CGPA: 4.62/5.00)</li>
+      <li>Prince Sultan Secondary School — High School Diploma, Nov 2019</li>
+    </ul>
+    <h3>3.2 Certifications</h3>
+    <ul>
+      <li>Red Hat System Administration I (RH124) — Red Hat (Jan 2024)</li>
+      <li>Java EE Application Development (AD183) — Red Hat (Mar 2024)</li>
+      <li>Game Design Course, Art Track — Ministry of C&IT/USC (Jul 2023)</li>
+    </ul>
+    <h3>3.3 Awards & Highlights</h3>
+    <ul>
+      <li>🏆 First Place, Best Graduation Project (“Lumen Lab”) — Univ. Jeddah (Dec 2024)</li>
+      <li>📜 Dean’s List: Fall 2023, Spring 2024, Fall 2024</li>
+      <li>🥇 Top Performer, RH124 — Red Hat Academy (Apr 2024)</li>
+    </ul>
+  </section>
+
+  <!-- 4. Experience -->
+  <section id="experience" class="panel">
+    <h2>4. Experience</h2>
+    <h3>4.1 Work Experience</h3>
+    <div class="job">
+      <h4>Java Developer (Intern)</h4>
+      <p>University of Jeddah – Red Hat Academy (Feb 2024–May 2024)</p>
+      <ul>
+        <li>Built RESTful Java EE microservices handling 10k+ daily requests, cutting API latency by 20%.</li>
+        <li>Automated CentOS server setup with Ansible, reducing setup time by 75%.</li>
+        <li>Refactored authentication to Red Hat SSO, boosting security compliance.</li>
+      </ul>
+    </div>
+    <h3>4.2 Project Experience</h3>
+    <div class="job">
+      <h4>Lumen Lab (Unity/C#)</h4>
+      <p>Game Director & Lead (Jan 2024–Nov 2024)</p>
+      <ul>
+        <li>Engineered a modular mirror & ray-tracing system via ScriptableObjects.</li>
+        <li>Asynchronous level loading cut initial scene load by 40%.</li>
+        <li>Weekly playtests gave a 90% satisfaction score.</li>
+      </ul>
+      <p>🔗 <a href="#" target="_blank">Play Lumen Lab</a></p>
+    </div>
+    <h3>4.3 Leadership Experience</h3>
+    <ul>
+      <li>Teaching Assistant, Software Engineering Fundamentals — Univ. Jeddah (Spring 2024): Coached 30+ students in Java OOP & coding challenges.</li>
+      <li>Volunteer Mentor, Codelab Summer Bootcamp (Game Dev) — CODE (Jun 2024): Guided 15 students through Unity basics.</li>
+    </ul>
+  </section>
+
+  <!-- 5. Skills & Tools -->
+  <section id="skills" class="panel">
+    <h2>5. Skills &amp; Tools</h2>
+    <h3>5.1 Skills</h3>
+    <ul class="skills-list">
+      <li>Leadership</li>
+      <li>Problem Solving</li>
+      <li>Communication</li>
+      <li>UX Design</li>
+    </ul>
+    <h3>5.2 Technologies &amp; Tools</h3>
+    <ul class="skills-list">
+      <li>Unity (2D/3D), TextMeshPro, Cinemachine, URP</li>
+      <li>C#, C++, Java, Python, JavaScript (ES6+), SQL</li>
+      <li>React.js, Spring Boot, Node.js, REST APIs</li>
+      <li>MySQL, PostgreSQL, Docker, Git, Jenkins (CI/CD)</li>
+    </ul>
+  </section>
+
+  <!-- 6. Portfolio Showcase -->
+  <section id="portfolio" class="panel">
+    <h2>6. Portfolio</h2>
     <div class="projects-grid">
       <!-- Example Card -->
       <div class="project-card">
-        <img src="project1-thumbnail.jpg" alt="Project 1 Thumbnail" />
-        <div class="project-content">
-          <h3>Lumen Lab</h3>
-          <p>An interactive ray‑tracing puzzle game in Unity. Engineered a modular mirror system and asynchronous level loading.</p>
-          <a href="#" target="_blank">View on itch.io</a>
-        </div>
+        <img src="thumb-lumenlab.jpg" alt="Lumen Lab Thumbnail">
+        <h4>Lumen Lab</h4>
+        <p>Modular mirror puzzle game with dynamic raycasting.</p>
+        <a href="#" target="_blank">View on itch.io</a>
       </div>
-      <!-- Add more project-card blocks here -->
+      <!-- Add more project cards here -->
     </div>
   </section>
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
+
+  <!-- 7. Personal Attributes -->
+  <section id="attributes" class="panel">
+    <h2>7. Personal Attributes</h2>
+    <ul>
+      <li>Detail-oriented</li>
+      <li>Creative Thinker</li>
+      <li>Adaptable & Quick Learner</li>
+      <li>Team Player</li>
+    </ul>
   </section>
-  <!-- Footer -->
+
   <footer>
-    © 2025 Abdulrhman Al‑Ghamdi. All rights reserved.
+    © 2025 Abdulrhman Al-Ghamdi. All rights reserved.
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
