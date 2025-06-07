@@ -8,14 +8,17 @@
   --light:  #E0E0E0;
   --dur:    0.3s;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background: var(--dark);
   color: var(--light);
@@ -32,9 +35,12 @@ header {
   padding: 0 2rem;
   background: var(--black);
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -56,6 +62,8 @@ header {
   align-items: center;
   gap: 1.5rem;
 }
+
+/* Unified styles for links and the CV button */
 .nav a,
 .dropbtn {
   position: relative;
@@ -64,18 +72,24 @@ header {
   line-height: 60px;
   color: var(--light);
   background: none;
-  border: none;
+  border: none;       /* remove white border */
   font: inherit;
   text-decoration: none;
   cursor: pointer;
   transition: color var(--dur);
+  outline: none;
 }
+
+/* Hover/active styling and underline via ::after */
 .nav a:hover,
 .nav a.active,
-.dropbtn:hover {
+.dropbtn:hover,
+.dropdown.open > .dropbtn {
   color: var(--yellow);
 }
-.nav a.active::after {
+
+.nav a.active::after,
+.dropdown.open > .dropbtn::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -85,10 +99,12 @@ header {
   background: var(--yellow);
 }
 
-/* Dropdown specifics */
+/* Dropdown container */
 .dropdown {
   position: relative;
 }
+
+/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -115,7 +131,8 @@ header {
   background: var(--blue);
   color: var(--dark);
 }
-/* show on hover (desktop) or on .open (mobile) */
+
+/* Show dropdown on hover (desktop) or when .open is added (mobile) */
 .dropdown:hover > .dropdown-content,
 .dropdown.open > .dropdown-content {
   display: block;
@@ -133,7 +150,7 @@ header {
 
 /* === Hero === */
 .hero {
-  margin-top: 60px; /* push below header */
+  margin-top: 60px; /* push below fixed header */
   height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
@@ -142,6 +159,7 @@ header {
   text-align: center;
   padding: 0 1rem;
 }
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -161,7 +179,7 @@ a.btn:hover {
   opacity: 0.9;
 }
 
-/* Panels */
+/* === Panels === */
 .panel {
   padding: 6rem 2rem 2rem;
   max-width: 900px;
@@ -175,7 +193,7 @@ a.btn:hover {
   padding-bottom: 0.25rem;
 }
 
-/* Projects grid */
+/* === Projects Grid & Cards === */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
@@ -186,7 +204,9 @@ a.btn:hover {
   border-radius: 6px;
   padding: 1rem;
   text-align: center;
-  display: flex; flex-direction: column; gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .project-card img {
   width: 100%;
@@ -215,7 +235,7 @@ a.btn:hover {
   color: var(--yellow);
 }
 
-/* Overlay */
+/* === Overlay === */
 .overlay {
   position: fixed;
   inset: 0;
@@ -255,7 +275,7 @@ a.btn:hover {
   cursor: pointer;
 }
 
-/* Social Icons */
+/* === Contact Social Icons === */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -266,7 +286,7 @@ a.btn:hover {
   filter: invert(1);
 }
 
-/* Utility */
+/* === Utility === */
 section + section {
   margin-top: 2rem;
 }
@@ -275,7 +295,9 @@ section + section {
 @media (max-width: 768px) {
   .nav {
     position: absolute;
-    top: 60px; left: 0; right: 0;
+    top: 60px;
+    left: 0;
+    right: 0;
     background: var(--black);
     flex-direction: column;
     display: none;
@@ -290,7 +312,6 @@ section + section {
   .nav-toggle {
     display: block;
   }
-  /* allow click‐toggle for dropdown */
   .dropdown-content {
     position: static;
     box-shadow: none;
