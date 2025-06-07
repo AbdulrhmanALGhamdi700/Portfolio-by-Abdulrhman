@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,34 +8,44 @@
     content="width=device-width, initial-scale=1.0"
   />
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self'; style-src 'self'">
+        content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com">
   <title>Abdulrhman Al-Ghamdi — Game Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Abdulrhman Al-Ghamdi, Unity & C# Game Developer specializing in Odin Inspector tools and immersive gameplay experiences.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abdulrhman Al-Ghamdi — Game Developer Portfolio">
+  <meta property="og:description" content="Check out my Unity projects, case studies, and demos.">
+  <meta property="og:image" content="images/social-card.png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <!-- Header / Nav -->
   <header>
-    <div class="logo">OFF BOX Studios</div>
-    <nav>
+    <div class="logo"><a href="#home">Abdulrhman Al-Ghamdi</a></div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav" aria-label="Main navigation">
       <ul>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#summary">Summary</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#attributes">Attributes</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero with Bite Button -->
-  <section class="hero" id="home">
+  <section class="hero panel" id="home">
     <h1>Abdulrhman Al-Ghamdi</h1>
     <p>Software Engineer & Indie Game Developer crafting immersive experiences with Unity and C#.</p>
     <div class="bite-button-wrapper">
       <button id="homePlayBtn" class="bite-button">View Portfolio</button>
-      <div class="teeth"></div>
+      <div class="teeth" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -43,8 +54,8 @@
     <h2>1. Contact Information</h2>
     <p><strong>Email:</strong> <a href="mailto:abdulrhman.alghamdi700@gmail.com">abdulrhman.alghamdi700@gmail.com</a></p>
     <p><strong>Location:</strong> Jeddah, Saudi Arabia</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abdulrhman-al-ghamdi-software-engineer" target="_blank">/in/abdulrhman-al-ghamdi-software-engineer</a></p>
-    <p><strong>Itch.io:</strong> <a href="https://itch.io/xd7oome3000" target="_blank">/xd7oome3000</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abdulrhman-al-ghamdi-software-engineer" target="_blank" rel="noopener">/in/abdulrhman-al-ghamdi-software-engineer</a></p>
+    <p><strong>Itch.io:</strong> <a href="https://itch.io/xd7oome3000" target="_blank" rel="noopener">/xd7oome3000</a></p>
   </section>
 
   <!-- 2. Professional Summary -->
@@ -65,7 +76,7 @@
     <ul>
       <li>Red Hat System Administration I (RH124) — Red Hat (Jan 2024)</li>
       <li>Java EE Application Development (AD183) — Red Hat (Mar 2024)</li>
-      <li>Game Design Course, Art Track — Ministry of C&IT/USC (Jul 2023)</li>
+      <li>Game Design Course, Art Track — Ministry of C&amp;IT/USC (Jul 2023)</li>
     </ul>
     <h3>3.3 Awards & Highlights</h3>
     <ul>
@@ -97,7 +108,7 @@
         <li>Asynchronous level loading cut initial scene load by 40%.</li>
         <li>Weekly playtests gave a 90% satisfaction score.</li>
       </ul>
-      <p>🔗 <a href="#" target="_blank">Play Lumen Lab</a></p>
+      <p>🔗 <a href="#" target="_blank" rel="noopener">Play Lumen Lab</a></p>
     </div>
     <h3>4.3 Leadership Experience</h3>
     <ul>
@@ -134,7 +145,7 @@
         <img src="thumb-lumenlab.jpg" alt="Lumen Lab Thumbnail">
         <h4>Lumen Lab</h4>
         <p>Modular mirror puzzle game with dynamic raycasting.</p>
-        <a href="#" target="_blank">View on itch.io</a>
+        <a href="#" target="_blank" rel="noopener">View on itch.io</a>
       </div>
       <!-- Add more project cards here -->
     </div>

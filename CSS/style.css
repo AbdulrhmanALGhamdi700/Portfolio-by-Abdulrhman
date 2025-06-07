@@ -1,3 +1,4 @@
+/* CSS/style.css */
 /* === Variables & Resets === */
 :root {
   --yellow: #ffb020;
@@ -20,7 +21,7 @@ html {
 body {
   background: var(--dark);
   color: var(--light);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
   line-height: 1.5;
 }
 
@@ -29,8 +30,10 @@ a {
   color: var(--light);
   transition: color var(--dur);
 }
-a:hover {
+a:hover,
+a:focus {
   color: var(--blue);
+  outline: none;
 }
 
 .bite-button {
@@ -46,7 +49,8 @@ a:hover {
   overflow: hidden;
   transition: transform var(--dur);
 }
-.bite-button:hover {
+.bite-button:hover,
+.bite-button:focus {
   transform: translateY(-2px);
 }
 
@@ -61,13 +65,12 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('teeth.png') bottom center no-repeat;
+  background: url('../images/teeth.png') bottom center no-repeat;
   background-size: contain;
   transition: transform 0.4s ease-in;
   transform: translateY(0);
   z-index: 2;
 }
-/* Trigger the bite */
 .bite-button-wrapper.bite .teeth {
   transform: translateY(100%);
 }
@@ -85,19 +88,23 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   z-index: 100;
 }
-header .logo {
+.logo a {
   color: var(--yellow);
   font-weight: bold;
   font-size: 1.25rem;
+  text-decoration: none;
 }
-header nav ul {
+.nav ul {
   display: flex;
   gap: 1rem;
+  list-style: none;
 }
-header nav a {
+.nav a {
   position: relative;
+  text-decoration: none;
+  padding: 0.25rem;
 }
-header nav a::after {
+.nav a::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -107,8 +114,43 @@ header nav a::after {
   background: var(--blue);
   transition: width var(--dur);
 }
-header nav a:hover::after {
+.nav a:hover::after,
+.nav a.active::after {
   width: 100%;
+}
+
+/* Nav toggle button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--light);
+  cursor: pointer;
+}
+
+/* === Mobile Nav === */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: var(--gray);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .nav-toggle {
+    display: block;
+  }
 }
 
 /* === Hero === */
@@ -184,6 +226,7 @@ header nav a:hover::after {
   display: inline-block;
   margin-bottom: 1rem;
   font-weight: bold;
+  color: var(--blue);
 }
 .project-card:hover {
   transform: translateY(-5px);
@@ -222,10 +265,6 @@ footer {
 @media (max-width: 1024px) {
   header { padding: 0.75rem 1rem; }
   .hero { padding: 0 1rem; }
-}
-@media (max-width: 768px) {
-  .projects-grid { gap: 1rem; }
-  .bite-button { width: 100%; text-align: center; }
 }
 @media (max-width: 480px) {
   header .logo { font-size: 1rem; }
