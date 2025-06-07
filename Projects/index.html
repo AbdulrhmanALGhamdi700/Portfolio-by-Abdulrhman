@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Projects — Abdulrhman Al-Ghamdi</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../Assets/image/OFF BOX Studio LOGO Black .png" alt="OFF BOX Studios Logo" />
+      <span>Abdulrhman Al-Ghamdi</span>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="../index.html">CV</a></li>
+        <li><a href="#" class="active">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects" class="panel">
+      <h2>Interactive Demos</h2>
+      <div class="projects-grid">
+        <!-- Lumen Lab -->
+        <div class="project-card" data-demo="lumen-lab">
+          <img src="../Assets/image/thumb-lumenlab.jpg" alt="Lumen Lab thumbnail" />
+          <h3>Lumen Lab</h3>
+          <button class="play-btn">▶ Play</button>
+          <a
+            class="source"
+            href="https://github.com/yourusername/lumen-lab"
+            target="_blank"
+            rel="noopener"
+          >Source</a>
+        </div>
+        <!-- Car Rentals -->
+        <div class="project-card" data-demo="car-rentals">
+          <img src="../Assets/image/thumb-car-rentals.jpg" alt="Car Rentals thumbnail" />
+          <h3>Car Rentals Agency</h3>
+          <button class="play-btn">▶ Play</button>
+          <a
+            class="source"
+            href="https://github.com/yourusername/car-rentals"
+            target="_blank"
+            rel="noopener"
+          >Source</a>
+        </div>
+        <!-- Add more cards here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Overlay for WebGL demos -->
+  <div id="demo-overlay" class="overlay">
+    <div class="overlay-content">
+      <button id="overlay-close" aria-label="Close demo">✕</button>
+      <iframe id="demo-frame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="../JS/main.js"></script>
+</body>
+</html>

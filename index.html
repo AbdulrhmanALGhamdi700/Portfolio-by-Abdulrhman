@@ -1,170 +1,127 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com">
-  <title>Abdulrhman Al-Ghamdi — Game Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Abdulrhman Al-Ghamdi, Unity & C# Game Developer specializing in Odin Inspector tools and immersive gameplay experiences.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Abdulrhman Al-Ghamdi — Game Developer Portfolio">
-  <meta property="og:description" content="Check out my Unity projects, case studies, and demos.">
-  <meta property="og:image" content="images/social-card.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Abdulrhman Al-Ghamdi — CV</title>
+  <meta name="description" content="CV of Abdulrhman Al-Ghamdi, Unity & C# Game Developer" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <!-- Header / Nav -->
   <header>
-    <div class="logo"><a href="#home">Abdulrhman Al-Ghamdi</a></div>
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    <nav class="nav" aria-label="Main navigation">
+    <div class="logo">
+      <img src="Assets/image/OFF BOX Studio LOGO Black .png" alt="OFF BOX Studios Logo" />
+      <span>Abdulrhman Al-Ghamdi</span>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav class="nav">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#attributes">Attributes</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">CV ▼</button>
+          <ul class="dropdown-content">
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#attributes">Attributes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </li>
+        <li><a href="Projects/index.html">Projects</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero with Bite Button -->
-  <section class="hero panel" id="home">
-    <h1>Abdulrhman Al-Ghamdi</h1>
-    <p>Software Engineer & Indie Game Developer crafting immersive experiences with Unity and C#.</p>
-    <div class="bite-button-wrapper">
-      <button id="homePlayBtn" class="bite-button">View Portfolio</button>
-      <div class="teeth" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- 1. Contact Information -->
-  <section id="contact" class="panel">
-    <h2>1. Contact Information</h2>
-    <p><strong>Email:</strong> <a href="mailto:abdulrhman.alghamdi700@gmail.com">abdulrhman.alghamdi700@gmail.com</a></p>
-    <p><strong>Location:</strong> Jeddah, Saudi Arabia</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abdulrhman-al-ghamdi-software-engineer" target="_blank" rel="noopener">/in/abdulrhman-al-ghamdi-software-engineer</a></p>
-    <p><strong>Itch.io:</strong> <a href="https://itch.io/xd7oome3000" target="_blank" rel="noopener">/xd7oome3000</a></p>
-  </section>
-
-  <!-- 2. Professional Summary -->
-  <section id="summary" class="panel">
-    <h2>2. Professional Summary</h2>
-    <p>Highly motivated leader with a passion for game development, web development, and UX design. Experienced in Agile teams, Unity (2D/3D), C#, Java, JavaScript (ES6+), and Python. Driven to deliver polished, scalable systems and immersive experiences.</p>
-  </section>
-
-  <!-- 3. Education & Certifications -->
-  <section id="education" class="panel">
-    <h2>3. Education &amp; Certifications</h2>
-    <h3>3.1 Education</h3>
-    <ul>
-      <li><strong>B.Sc. Software Engineering</strong>, University of Jeddah, KSA — Graduated 2025 (CGPA: 4.62/5.00)</li>
-      <li>Prince Sultan Secondary School — High School Diploma, Nov 2019</li>
-    </ul>
-    <h3>3.2 Certifications</h3>
-    <ul>
-      <li>Red Hat System Administration I (RH124) — Red Hat (Jan 2024)</li>
-      <li>Java EE Application Development (AD183) — Red Hat (Mar 2024)</li>
-      <li>Game Design Course, Art Track — Ministry of C&amp;IT/USC (Jul 2023)</li>
-    </ul>
-    <h3>3.3 Awards & Highlights</h3>
-    <ul>
-      <li>🏆 First Place, Best Graduation Project (“Lumen Lab”) — Univ. Jeddah (Dec 2024)</li>
-      <li>📜 Dean’s List: Fall 2023, Spring 2024, Fall 2024</li>
-      <li>🥇 Top Performer, RH124 — Red Hat Academy (Apr 2024)</li>
-    </ul>
-  </section>
-
-  <!-- 4. Experience -->
-  <section id="experience" class="panel">
-    <h2>4. Experience</h2>
-    <h3>4.1 Work Experience</h3>
-    <div class="job">
-      <h4>Java Developer (Intern)</h4>
-      <p>University of Jeddah – Red Hat Academy (Feb 2024–May 2024)</p>
-      <ul>
-        <li>Built RESTful Java EE microservices handling 10k+ daily requests, cutting API latency by 20%.</li>
-        <li>Automated CentOS server setup with Ansible, reducing setup time by 75%.</li>
-        <li>Refactored authentication to Red Hat SSO, boosting security compliance.</li>
-      </ul>
-    </div>
-    <h3>4.2 Project Experience</h3>
-    <div class="job">
-      <h4>Lumen Lab (Unity/C#)</h4>
-      <p>Game Director & Lead (Jan 2024–Nov 2024)</p>
-      <ul>
-        <li>Engineered a modular mirror & ray-tracing system via ScriptableObjects.</li>
-        <li>Asynchronous level loading cut initial scene load by 40%.</li>
-        <li>Weekly playtests gave a 90% satisfaction score.</li>
-      </ul>
-      <p>🔗 <a href="#" target="_blank" rel="noopener">Play Lumen Lab</a></p>
-    </div>
-    <h3>4.3 Leadership Experience</h3>
-    <ul>
-      <li>Teaching Assistant, Software Engineering Fundamentals — Univ. Jeddah (Spring 2024): Coached 30+ students in Java OOP & coding challenges.</li>
-      <li>Volunteer Mentor, Codelab Summer Bootcamp (Game Dev) — CODE (Jun 2024): Guided 15 students through Unity basics.</li>
-    </ul>
-  </section>
-
-  <!-- 5. Skills & Tools -->
-  <section id="skills" class="panel">
-    <h2>5. Skills &amp; Tools</h2>
-    <h3>5.1 Skills</h3>
-    <ul class="skills-list">
-      <li>Leadership</li>
-      <li>Problem Solving</li>
-      <li>Communication</li>
-      <li>UX Design</li>
-    </ul>
-    <h3>5.2 Technologies &amp; Tools</h3>
-    <ul class="skills-list">
-      <li>Unity (2D/3D), TextMeshPro, Cinemachine, URP</li>
-      <li>C#, C++, Java, Python, JavaScript (ES6+), SQL</li>
-      <li>React.js, Spring Boot, Node.js, REST APIs</li>
-      <li>MySQL, PostgreSQL, Docker, Git, Jenkins (CI/CD)</li>
-    </ul>
-  </section>
-
-  <!-- 6. Portfolio Showcase -->
-  <section id="portfolio" class="panel">
-    <h2>6. Portfolio</h2>
-    <div class="projects-grid">
-      <!-- Example Card -->
-      <div class="project-card">
-        <img src="thumb-lumenlab.jpg" alt="Lumen Lab Thumbnail">
-        <h4>Lumen Lab</h4>
-        <p>Modular mirror puzzle game with dynamic raycasting.</p>
-        <a href="#" target="_blank" rel="noopener">View on itch.io</a>
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <h1>Hi, I’m Abdulrhman</h1>
+      <p>
+        Unity &amp; C# developer crafting custom editor tools with Odin Inspector,
+        runtime debug systems, and immersive WebGL demos.
+      </p>
+      <div class="hero-buttons">
+        <a href="#summary" class="btn">Learn More ↓</a>
+        <a href="Projects/index.html" class="btn">View Projects →</a>
       </div>
-      <!-- Add more project cards here -->
-    </div>
-  </section>
+    </section>
 
-  <!-- 7. Personal Attributes -->
-  <section id="attributes" class="panel">
-    <h2>7. Personal Attributes</h2>
-    <ul>
-      <li>Detail-oriented</li>
-      <li>Creative Thinker</li>
-      <li>Adaptable & Quick Learner</li>
-      <li>Team Player</li>
-    </ul>
-  </section>
+    <!-- Summary -->
+    <section id="summary" class="panel">
+      <h2>Professional Summary</h2>
+      <p>Passionate game-dev lead with 3+ years in Unity (2D/3D), C#, JavaScript &amp; Python. I build efficient editor workflows and engaging gameplay experiences.</p>
+    </section>
 
-  <footer>
-    © 2025 Abdulrhman Al-Ghamdi. All rights reserved.
-  </footer>
+    <!-- Education -->
+    <section id="education" class="panel">
+      <h2>Education &amp; Certifications</h2>
+      <ul>
+        <li><strong>B.Sc. Software Engineering</strong>, Univ. of Jeddah (CGPA 4.62/5.00)</li>
+        <li>Red Hat System Administration I (RH124) — Red Hat Academy</li>
+        <li>Java EE Application Development (AD183) — Red Hat Academy</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="panel">
+      <h2>Experience</h2>
+      <h3>Java Developer Intern</h3>
+      <p>University of Jeddah — Red Hat Academy (Feb 2024 – May 2024)</p>
+      <ul>
+        <li>Built RESTful Java EE microservices; cut API latency by 20%.</li>
+        <li>Automated CentOS server setups with Ansible; reduced setup time by 75%.</li>
+      </ul>
+      <h3>Lumen Lab (Unity/C#)</h3>
+      <p>Game Director &amp; Lead (Jan 2024 – Nov 2024)</p>
+      <ul>
+        <li>Engineered modular mirror &amp; ray-tracing via ScriptableObjects.</li>
+        <li>Async level loading lowered scene load times by 40%.</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="panel">
+      <h2>Skills &amp; Tools</h2>
+      <ul>
+        <li>Unity (Odin Inspector, TextMeshPro, URP)</li>
+        <li>C#, JavaScript (ES6+), Python</li>
+        <li>Git, Docker, Jenkins (CI/CD)</li>
+      </ul>
+    </section>
+
+    <!-- Attributes -->
+    <section id="attributes" class="panel">
+      <h2>Personal Attributes</h2>
+      <ul>
+        <li>Detail-oriented</li>
+        <li>Creative problem-solver</li>
+        <li>Team player &amp; mentor</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <p><a href="mailto:abdulrhman.alghamdi700@gmail.com">abdulrhman.alghamdi700@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="https://github.com/yourusername"><img src="Assets/SVG/github.svg" alt="GitHub" /></a>
+        <a href="https://discord.gg/..."><img src="Assets/SVG/discord.svg" alt="Discord" /></a>
+        <a href="https://instagram.com/yourusername"><img src="Assets/SVG/instagram.svg" alt="Instagram" /></a>
+        <a href="https://wa.me/yourNumber"><img src="Assets/SVG/whatsapp.svg" alt="WhatsApp" /></a>
+      </div>
+    </section>
+  </main>
 
   <script src="JS/main.js"></script>
 </body>
