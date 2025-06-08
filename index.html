@@ -7,39 +7,43 @@
   <meta name="description" content="CV of Abdulrhman Al-Ghamdi, Unity & C# Game Developer" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- Mobile header with toggle -->
+  <div class="mobile-header">
+    <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+    <div class="mobile-logo">Abdulrhman Al-Ghamdi</div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
     <div class="logo">
       <img src="Assets/image/OFF BOX Studio LOGO Black .png" alt="OFF BOX Studios Logo" />
       <span>Abdulrhman Al-Ghamdi</span>
     </div>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
     <nav class="nav">
       <ul>
         <li><a href="#home" class="active">Home</a></li>
-        <li class="dropdown">
-          <button class="dropbtn">CV ▼</button>
-          <ul class="dropdown-content">
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#attributes">Attributes</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#attributes">Attributes</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="Projects/index.html">Projects</a></li>
       </ul>
     </nav>
-  </header>
+  </aside>
 
-  <main>
-    <!-- Hero -->
+  <!-- Main content -->
+  <main class="content">
     <section id="home" class="hero">
       <h1>Hi, I’m Abdulrhman</h1>
       <p>
@@ -52,13 +56,11 @@
       </div>
     </section>
 
-    <!-- Summary -->
     <section id="summary" class="panel">
       <h2>Professional Summary</h2>
       <p>Passionate game-dev lead with 3+ years in Unity (2D/3D), C#, JavaScript &amp; Python. I build efficient editor workflows and engaging gameplay experiences.</p>
     </section>
 
-    <!-- Education -->
     <section id="education" class="panel">
       <h2>Education &amp; Certifications</h2>
       <ul>
@@ -68,7 +70,6 @@
       </ul>
     </section>
 
-    <!-- Experience -->
     <section id="experience" class="panel">
       <h2>Experience</h2>
       <h3>Java Developer Intern</h3>
@@ -78,14 +79,13 @@
         <li>Automated CentOS server setups with Ansible; reduced setup time by 75%.</li>
       </ul>
       <h3>Lumen Lab (Unity/C#)</h3>
-      <p>Game Director & Lead (Jan 2024 – Nov 2024)</p>
+      <p>Game Director &amp; Lead (Jan 2024 – Nov 2024)</p>
       <ul>
         <li>Engineered modular mirror &amp; ray-tracing via ScriptableObjects.</li>
         <li>Async level loading lowered scene load times by 40%.</li>
       </ul>
     </section>
 
-    <!-- Skills -->
     <section id="skills" class="panel">
       <h2>Skills &amp; Tools</h2>
       <ul>
@@ -95,7 +95,6 @@
       </ul>
     </section>
 
-    <!-- Attributes -->
     <section id="attributes" class="panel">
       <h2>Personal Attributes</h2>
       <ul>
@@ -105,15 +104,14 @@
       </ul>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="panel">
       <h2>Contact</h2>
       <p><a href="mailto:abdulrhman.alghamdi700@gmail.com">abdulrhman.alghamdi700@gmail.com</a></p>
       <div class="social-icons">
-        <a href="https://github.com/yourusername"><img src="Assets/SVG/github.svg" alt="GitHub" /></a>
-        <a href="https://discord.gg/..."><img src="Assets/SVG/discord.svg" alt="Discord" /></a>
-        <a href="https://instagram.com/yourusername"><img src="Assets/SVG/instagram.svg" alt="Instagram" /></a>
-        <a href="https://wa.me/yourNumber"><img src="Assets/SVG/whatsapp.svg" alt="WhatsApp" /></a>
+        <a href="https://github.com/yourusername"><img src="Assets/SVG/github.svg" alt="GitHub"></a>
+        <a href="https://discord.gg/..."><img src="Assets/SVG/discord.svg" alt="Discord"></a>
+        <a href="https://instagram.com/yourusername"><img src="Assets/SVG/instagram.svg" alt="Instagram"></a>
+        <a href="https://wa.me/yourNumber"><img src="Assets/SVG/whatsapp.svg" alt="WhatsApp"></a>
       </div>
     </section>
   </main>
