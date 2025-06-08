@@ -3,115 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Abdulrhman Al-Ghamdi — CV</title>
-  <meta name="description" content="CV of Abdulrhman Al-Ghamdi, Unity & C# Game Developer" />
+  <title>Abdulrhman Abdullah Al-Ghamdi — CV</title>
 
-  <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="CSS/style.css" />
+  <!-- FontAwesome for the hamburger & carets -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
 <body>
-
-  <!-- Mobile header with toggle -->
-  <div class="mobile-header">
-    <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-    <div class="mobile-logo">Abdulrhman Al-Ghamdi</div>
-  </div>
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
+  <!-- Top Navigation -->
+  <header class="topnav" id="myTopnav">
     <div class="logo">
-      <img src="Assets/image/OFF BOX Studio LOGO Black .png" alt="OFF BOX Studios Logo" />
-      <span>Abdulrhman Al-Ghamdi</span>
+      <span>Abdulrhman Abdullah Al-Ghamdi</span>
     </div>
-    <nav class="nav">
+
+    <nav class="menu">
       <ul>
         <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#attributes">Attributes</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <!-- About dropdown -->
+        <li class="dropdown">
+          <a href="javascript:;">About <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+          </ul>
+        </li>
+
+        <!-- More dropdown -->
+        <li class="dropdown">
+          <a href="javascript:;">More <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#attributes">Soft Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </li>
+
         <li><a href="Projects/index.html">Projects</a></li>
       </ul>
     </nav>
-  </aside>
 
-  <!-- Main content -->
-  <main class="content">
-    <section id="home" class="hero">
-      <h1>Hi, I’m Abdulrhman</h1>
+    <!-- Hamburger icon -->
+    <a href="javascript:void(0);" class="icon" id="navToggle">
+      <i class="fa fa-bars"></i>
+    </a>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="panel hero">
+      <h1>Abdulrhman Abdullah Al-Ghamdi</h1>
+      <p><strong>Software Engineer &amp; Indie Game Developer</strong></p>
+      <p>📍 Jeddah, Saudi Arabia</p>
       <p>
-        Unity &amp; C# developer crafting custom editor tools with Odin Inspector,
-        runtime debug systems, and immersive WebGL demos.
+        ✉️ <a href="mailto:abdulrhman.alghamdi700@gmail.com">
+          abdulrhman.alghamdi700@gmail.com
+        </a>
+        &nbsp;&nbsp;
+        🔗 <a href="https://linkedin.com/in/abdulrhman-al-ghamdi-software-engineer" target="_blank">
+          linkedin.com/in/abdulrhman-al-ghamdi-software-engineer
+        </a>
+        &nbsp;&nbsp;
+        🔗 <a href="https://itch.io/xd7oome3000" target="_blank">
+          itch.io/xd7oome3000
+        </a>
       </p>
-      <div class="hero-buttons">
-        <a href="#summary" class="btn">Learn More ↓</a>
-        <a href="Projects/index.html" class="btn">View Projects →</a>
-      </div>
     </section>
 
+    <!-- SUMMARY -->
     <section id="summary" class="panel">
       <h2>Professional Summary</h2>
-      <p>Passionate game-dev lead with 3+ years in Unity (2D/3D), C#, JavaScript &amp; Python. I build efficient editor workflows and engaging gameplay experiences.</p>
+      <p>
+        Highly motivated leader with a passion for game development, web development, and
+        user experience (UX) design. Experienced collaborating with Agile teams to architect
+        and implement core systems, enhance user interfaces, and deliver polished prototypes.
+        Proficient in Unity (2D/3D), C#, Java, JavaScript (ES6+), and Python. Continuously
+        seeks to stay up-to-date with the latest industry trends and bring creative,
+        problem-solving energy to every project.
+      </p>
     </section>
 
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" class="panel">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Game Engines &amp; Tools:</strong> Unity (2D/3D), TextMeshPro, Cinemachine, URP, ProBuilder, Input System</li>
+        <li><strong>Languages:</strong> C#, C++, Java, Python, JavaScript (ES6+), SQL</li>
+        <li><strong>Web & Backend:</strong> Spring Boot, Java EE, Servlets/JSP, Node.js, Express, RESTful APIs, HTML5/CSS3, React.js</li>
+        <li><strong>Databases:</strong> MySQL, PostgreSQL, SQLite</li>
+        <li><strong>DevOps &amp; Admin:</strong> Linux (Red Hat), Docker, Git, GitHub, Jenkins (CI/CD)</li>
+        <li><strong>UX & Front-End:</strong> HTML/CSS, JavaScript, Microsoft Office (Word, Excel, PowerPoint)</li>
+        <li><strong>CI/CD &amp; Collaboration:</strong> Agile/Scrum, JIRA, Trello, Bitbucket, VS Code, IntelliJ, Visual Studio, Postman</li>
+      </ul>
+    </section>
+
+    <!-- SOFT SKILLS -->
+    <section id="attributes" class="panel">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Leadership</li>
+        <li>Problem-Solving</li>
+        <li>Communication</li>
+        <li>Team Collaboration</li>
+        <li>UX Design</li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION -->
     <section id="education" class="panel">
       <h2>Education &amp; Certifications</h2>
       <ul>
-        <li><strong>B.Sc. Software Engineering</strong>, Univ. of Jeddah (CGPA 4.62/5.00)</li>
-        <li>Red Hat System Administration I (RH124) — Red Hat Academy</li>
-        <li>Java EE Application Development (AD183) — Red Hat Academy</li>
+        <li><strong>B.Sc. Software Engineering</strong>, University of Jeddah, KSA — Graduated 2025 (CGPA 4.62/5.00)</li>
+        <li>Red Hat System Administration I (RH124) — Red Hat | Issued Jan 2024</li>
+        <li>Java EE App Dev (AD183) — Red Hat | Issued Mar 2024</li>
+        <li>University Business Incubator – Art Track (CODE/Ministry C&IT/USC) — Jun 2024</li>
+        <li>Game Design Course, Art Track (CODE/Ministry C&IT/USC) — Jul 2023</li>
+      </ul>
+
+      <h3>Honors &amp; Awards</h3>
+      <ul>
+        <li>🏆 First Place – Best Graduation Project (“Lumen Lab”), University of Jeddah (Dec 2024)</li>
+        <li>🥇 Top Performer – RH124, Red Hat Academy (Apr 2024)</li>
+        <li>📜 Dean’s List: Fall 2023, Spring 2024, Fall 2024</li>
       </ul>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience" class="panel">
-      <h2>Experience</h2>
-      <h3>Java Developer Intern</h3>
-      <p>University of Jeddah — Red Hat Academy (Feb 2024 – May 2024)</p>
+      <h2>Professional Experience</h2>
+
+      <h3>Java Developer (Intern)</h3>
+      <p><em>University of Jeddah – Red Hat Academy | Feb 2024 – May 2024</em></p>
       <ul>
-        <li>Built RESTful Java EE microservices; cut API latency by 20%.</li>
-        <li>Automated CentOS server setups with Ansible; reduced setup time by 75%.</li>
+        <li>Built RESTful Java EE microservices handling 10k+ daily requests, reducing latency by 20%.</li>
+        <li>Automated CentOS server provisioning with Ansible &amp; Bash, cutting setup time by 75%.</li>
+        <li>Refactored authentication to Red Hat SSO, boosting security compliance.</li>
       </ul>
-      <h3>Lumen Lab (Unity/C#)</h3>
-      <p>Game Director &amp; Lead (Jan 2024 – Nov 2024)</p>
+
+      <h3>Game Developer (Lead)</h3>
+      <p><em>Self-Directed &amp; University Projects | May 2023 – Dec 2024</em></p>
       <ul>
-        <li>Engineered modular mirror &amp; ray-tracing via ScriptableObjects.</li>
-        <li>Async level loading lowered scene load times by 40%.</li>
+        <li>Led “Mutant Apocalypse: The Last Green Hope,” an educational Unity game on environmental awareness.</li>
+        <li>Coordinated cross-functional teams, delivering polished prototypes on schedule.</li>
       </ul>
     </section>
 
-    <section id="skills" class="panel">
-      <h2>Skills &amp; Tools</h2>
-      <ul>
-        <li>Unity (Odin Inspector, TextMeshPro, URP)</li>
-        <li>C#, JavaScript (ES6+), Python</li>
-        <li>Git, Docker, Jenkins (CI/CD)</li>
-      </ul>
-    </section>
-
-    <section id="attributes" class="panel">
-      <h2>Personal Attributes</h2>
-      <ul>
-        <li>Detail-oriented</li>
-        <li>Creative problem-solver</li>
-        <li>Team player &amp; mentor</li>
-      </ul>
-    </section>
-
+    <!-- CONTACT -->
     <section id="contact" class="panel">
       <h2>Contact</h2>
-      <p><a href="mailto:abdulrhman.alghamdi700@gmail.com">abdulrhman.alghamdi700@gmail.com</a></p>
+      <p>
+        ✉️ <a href="mailto:abdulrhman.alghamdi700@gmail.com">
+          abdulrhman.alghamdi700@gmail.com
+        </a><br/>
+        📍 Jeddah, Saudi Arabia
+      </p>
       <div class="social-icons">
-        <a href="https://github.com/yourusername"><img src="Assets/SVG/github.svg" alt="GitHub"></a>
-        <a href="https://discord.gg/..."><img src="Assets/SVG/discord.svg" alt="Discord"></a>
-        <a href="https://instagram.com/yourusername"><img src="Assets/SVG/instagram.svg" alt="Instagram"></a>
-        <a href="https://wa.me/yourNumber"><img src="Assets/SVG/whatsapp.svg" alt="WhatsApp"></a>
+        <a href="https://github.com/yourusername"><img src="Assets/SVG/github.svg" alt="GitHub" /></a>
+        <a href="https://linkedin.com/in/abdulrhman-al-ghamdi-software-engineer"><img src="Assets/SVG/linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://itch.io/xd7oome3000"><img src="Assets/SVG/itchio.svg" alt="Itch.io" /></a>
       </div>
     </section>
   </main>

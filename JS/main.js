@@ -1,41 +1,45 @@
 'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile sidebar toggle
-  const toggle = document.querySelector('.mobile-toggle');
-  const sidebar = document.querySelector('.sidebar');
-  toggle?.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
+  const topnav = document.getElementById('myTopnav');
+
+  // 1. Mobile menu (hamburger) toggle
+  document.getElementById('navToggle').addEventListener('click', () => {
+    topnav.classList.toggle('responsive');
   });
 
-  // Smooth scroll for in-page links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const tgt = document.querySelector(a.getAttribute('href'));
-      if (!tgt) return;
+  // 2. Highlight active link on scroll
+  window.addEventListener('scroll', () => {
+    const y = window.pageYOffset;
+    document.querySelectorAll('section[id]').forEach(sec => {
+      const top    = sec.offsetTop - 80;
+      const bottom = top + sec.offsetHeight;
+      const id     = sec.getAttribute('id');
+      const link   = document.querySelector(`.menu a[href="#${id}"]`);
+      if (y >= top && y < bottom) link?.classList.add('active');
+      else link?.classList.remove('active');
+    });
+  });
+
+  // 3. Dropdown click-to-toggle
+  document.querySelectorAll('.dropdown').forEach(dd => {
+    const trigger = dd.querySelector('a');
+    trigger.addEventListener('click', e => {
       e.preventDefault();
-      tgt.scrollIntoView({ behavior: 'smooth' });
-      if (sidebar.classList.contains('open')) {
-        sidebar.classList.remove('open');
-      }
+      e.stopPropagation();
+      // close any other open dropdowns
+      document.querySelectorAll('.dropdown.open').forEach(openDd => {
+        if (openDd !== dd) openDd.classList.remove('open');
+      });
+      // toggle this one
+      dd.classList.toggle('open');
     });
   });
 
-  // Demo overlay logic (Projects page)
-  const overlay  = document.getElementById('demo-overlay');
-  const iframe   = document.getElementById('demo-frame');
-  const closeBtn = document.getElementById('overlay-close');
-
-  document.querySelectorAll('.play-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-      const demo = e.target.closest('.project-card')?.dataset.demo;
-      if (!demo) return;
-      iframe.src = `${demo}/index.html`;
-      overlay.classList.add('open');
+  // 4. Close dropdowns when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.dropdown.open').forEach(dd => {
+      dd.classList.remove('open');
     });
-  });
-
-  closeBtn?.addEventListener('click', () => {
-    overlay.classList.remove('open');
-    iframe.src = '';
   });
 });

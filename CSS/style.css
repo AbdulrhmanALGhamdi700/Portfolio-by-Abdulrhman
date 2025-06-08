@@ -3,201 +3,216 @@
   --yellow: #FFB020;
   --green:  #00CC88;
   --blue:   #409CFF;
-  --black:  #222222;
   --dark:   #121212;
+  --gray:   #1e1e1e;
   --light:  #E0E0E0;
   --dur:    0.3s;
 }
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--dark);
   color: var(--light);
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* === Mobile Header === */
-.mobile-header {
-  display: none;
-  background: var(--black);
-  height: 60px;
-  align-items: center;
-  padding: 0 1rem;
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1001;
-}
-.mobile-header .mobile-toggle {
-  background: none; border: none;
-  color: var(--light); font-size: 1.5rem;
-  cursor: pointer;
-}
-.mobile-header .mobile-logo {
-  margin-left: 1rem;
-  color: var(--yellow);
-  font-weight: 600;
-}
-
-/* === Sidebar === */
-.sidebar {
-  width: 220px;
-  background: var(--black);
-  height: 100vh;
-  position: fixed;
-  top: 0; left: 0;
-  padding: 1.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.logo {
-  display: flex; align-items: center;
-  gap: 0.5rem;
-}
-.logo img { height: 1.75rem; }
-.logo span {
-  color: var(--yellow);
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-.nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.nav a {
+/* === LINKS === */
+a {
   color: var(--light);
   text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: background var(--dur), color var(--dur);
+  transition: color var(--dur);
 }
-.nav a:hover,
-.nav a.active {
+a:hover {
+  color: var(--blue);
+}
+
+/* === HEADER & NAV === */
+header.topnav {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
   background: var(--gray);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+/* Logo / Name on left */
+header .logo {
+  font-weight: 700;
+  font-size: 1.3rem;
   color: var(--yellow);
 }
 
-/* === Main Content === */
-.content {
-  margin-left: 220px;
-  padding: 1rem 2rem 2rem 2rem;
+/* Menu pushed to right */
+nav.menu {
+  margin-left: auto;
 }
-.hero {
-  height: calc(100vh - 60px);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  text-align: center;
-  padding: 0 1rem;
+nav.menu ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
 }
-.hero-buttons {
-  margin-top: 1.5rem;
-  display: flex; gap: 1rem;
-}
-a.btn {
-  background: var(--green);
-  color: var(--black);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: opacity var(--dur);
-}
-a.btn:hover { opacity: 0.9; }
-
-/* === Panels === */
-.panel {
-  padding: 4rem 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.panel h2 {
-  font-size: 2rem; margin-bottom: 1rem;
-  border-bottom: 3px solid var(--blue);
-  display: inline-block; padding-bottom: 0.25rem;
-}
-
-/* === Projects Grid === */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
-  gap: 1.5rem;
-}
-.project-card {
-  background: rgba(255,255,255,0.05);
-  padding: 1rem; border-radius: 6px;
-  display: flex; flex-direction: column; gap: 0.5rem;
-}
-.project-card img {
-  width: 100%; border-radius: 4px;
-}
-.play-btn {
-  background: var(--blue); color: #fff;
-  border: none; padding: 0.5rem; border-radius: 4px;
-  cursor: pointer; transition: opacity var(--dur);
-}
-.play-btn:hover { opacity: 0.9; }
-.source {
-  margin-top: auto;
-  color: var(--green);
-  font-weight: 600;
-  text-decoration: none;
-}
-.source:hover { color: var(--yellow); }
-
-/* === Overlay === */
-.overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  align-items: center; justify-content: center;
-  z-index: 2000;
-}
-.overlay.open { display: flex; }
-.overlay-content {
+nav.menu li {
   position: relative;
-  width: 90%; max-width: 960px; height: 80vh;
 }
-#demo-frame {
-  width: 100%; height: 100%; border: none;
-  border-radius: 6px; background: #000;
+nav.menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--light);
+  transition: background var(--dur), color var(--dur);
 }
-#overlay-close {
-  position: absolute; top: -1.5rem; right: -1.5rem;
-  background: var(--yellow); border: none;
-  color: var(--black); font-size: 1.5rem;
-  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+nav.menu a:hover,
+nav.menu a.active {
+  background: var(--yellow);
+  color: var(--dark);
+  border-radius: 4px;
+}
+
+/* === DROPDOWN === */
+.dropdown-content {
+  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--gray);
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  border-radius: 4px;
+  transform: translateY(10px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0s linear 0.2s;
+}
+.dropdown.open > .dropdown-content {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.dropdown-content li {
+  list-style: none;
+}
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--light);
+}
+.dropdown-content a:hover {
+  background: var(--blue);
+  color: var(--dark);
+}
+
+/* === HAMBURGER ICON (mobile) === */
+.icon {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--light);
+  padding: 0.75rem;
   cursor: pointer;
 }
 
-/* === Contact Icons === */
+/* === HERO & PANELS TYPOGRAPHY === */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem 3rem;
+}
+.hero h1 {
+  font-size: 2.75rem;
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0.5rem auto;
+}
+
+/* Section container */
+.panel {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+/* Section titles */
+.panel h2 {
+  font-size: 2rem;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--blue);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+.panel h3 {
+  font-size: 1.25rem;
+  color: var(--yellow);
+  margin: 1.5rem 0 0.5rem;
+}
+/* Body text */
+.panel p,
+.panel li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  max-width: 750px;
+}
+
+/* === SKILLS CHIPS === */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+}
+.skills-list li {
+  background: var(--highlight);
+  color: var(--dark);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* === CONTACT ICONS === */
 .social-icons {
-  display: flex; gap: 0.75rem;
+  display: flex;
+  gap: 1rem;
   margin-top: 1rem;
 }
 .social-icons img {
-  width: 28px; filter: invert(1);
+  width: 28px;
+  filter: invert(1);
 }
 
-/* === Responsive === */
-@media (max-width: 1024px) {
-  .sidebar { width: 200px; }
-  .content { margin-left: 200px; }
-}
-@media (max-width: 768px) {
-  .mobile-header { display: flex; }
-  .sidebar {
-    transform: translateX(-100%);
-    transition: transform var(--dur);
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  nav.menu {
+    display: none;
+    width: 100%;
   }
-  .sidebar.open {
-    transform: translateX(0);
+  header.topnav.responsive nav.menu {
+    display: block;
+    background: var(--gray);
   }
-  .content {
-    margin-left: 0;
-    padding-top: 60px;
+  nav.menu ul {
+    flex-direction: column;
+  }
+  .icon {
+    display: block;
   }
 }
